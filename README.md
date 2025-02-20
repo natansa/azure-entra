@@ -1,2 +1,1 @@
-# vagas
-Venha fazer parte do nosso time.
+# IMPLEMENTAÇÃO PARA INTEGRAÇÃO COM AZURE ENTRA ID
