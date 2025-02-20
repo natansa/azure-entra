@@ -1,0 +1,148 @@
+﻿@{
+    ViewData["Title"] = "Azure Entra ID";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Domain.Models.ProfileModel
+
+<table class="table table-striped table-condensed" style="font-family: monospace" border="1">
+    <thead>
+        @{
+            <tr>
+                <th>
+                    Current User ID
+                </th>
+                <th>
+                    @Model.CurrentUser.Id
+                </th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>
+                    Current User Name
+                </th>
+                <th>
+                    @Model.CurrentUser.Name
+                </th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>
+                    Current User Principal Name
+                </th>
+                <th>
+                    @Model.CurrentUser.UserPrincipalName
+                </th>
+                <th></th>
+            </tr>
+        }
+        @{
+            foreach (var organization in Model.Organizations)
+            {
+                <tr>
+                    <th>
+                        Organization ID
+                    </th>
+                    <th>
+                        @organization.Id
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>
+                        Organization Name
+                    </th>
+                    <th>
+                        @organization.Name
+                    </th>
+                    <th></th>
+                </tr>
+            }
+        }
+        @{
+            <tr>
+                <th>
+                    Tenant ID
+                </th>
+                <th>
+                    @Model.Tenant.Id
+                </th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>
+                    Tenant Name
+                </th>
+                <th>
+                    @Model.Tenant.Name
+                </th>
+                <th></th>
+            </tr>
+        }
+        @{
+            foreach (var user in Model.Users)
+            {
+                <tr>
+                    <th>
+                        User ID
+                    </th>
+                    <th>
+                        @user.Id
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>
+                        User Name
+                    </th>
+                    <th>
+                        @user.Name
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>
+                        User Principal Name
+                    </th>
+                    <th>
+                        @user.UserPrincipalName
+                    </th>
+                    <th></th>
+                </tr>
+            }
+        }
+        @{
+            foreach (var group in Model.Groups)
+            {
+                <tr>
+                    <th>
+                        Group ID
+                    </th>
+                    <th>
+                        @group.Id
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>
+                        Group Name
+                    </th>
+                    <th>
+                        @group.Name
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>
+                        Group Mail
+                    </th>
+                    <th>
+                        @group.Mail
+                    </th>
+                    <th></th>
+                </tr>
+            }
+        }
+    </thead>
+    <tbody>
+    </tbody>
+</table>
