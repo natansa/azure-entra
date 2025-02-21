@@ -23,7 +23,7 @@ public class AuthUserService : IAuthUserService
                 new ObjectIdentity
                 {
                     SignInType = "emailAddress",
-                    Issuer = "ionichealthb2c.onmicrosoft.com",
+                    Issuer = "mydomain.onmicrosoft.com",
                     IssuerAssignedId = userSyncAdb2CModel.Email
                 }
             },
