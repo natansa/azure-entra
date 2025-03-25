@@ -10,7 +10,7 @@ public class UserSyncCronJob : BackgroundService
 {
     private readonly ILogger<UserSyncCronJob> _logger;
     private readonly IServiceScopeFactory _serviceScopeFactory;
-    private readonly TimeSpan _executionTime = new TimeSpan(13, 57, 0);
+    private readonly TimeSpan _executionTime = new(13, 57, 0);
 
     public UserSyncCronJob(ILogger<UserSyncCronJob> logger, IServiceScopeFactory serviceScopeFactory)
     {
@@ -60,7 +60,7 @@ public class UserSyncCronJob : BackgroundService
                 (
                     "Natanael",
                     "Sa Rodrigues 2",
-                    "nrodrigues+teste01@ionic.health"
+                    "nrodrigues+teste01@domain"
                 ));
             }
         }

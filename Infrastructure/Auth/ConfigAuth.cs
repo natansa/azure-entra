@@ -12,7 +12,6 @@ public static class ConfigAuth
     {
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<IAuthUserService, AuthUserService>();
-        //services.AddScoped<ITokenAcquisition, TokenAcquisition>();
 
         var initialScopes = configuration.GetValue<string>("DownstreamApi:Scopes")?.Split(' ');
 

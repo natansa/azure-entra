@@ -20,10 +20,10 @@ public class AuthUserService : IAuthUserService
             DisplayName = $"{userSyncAdb2CModel.FirstName} {userSyncAdb2CModel.LastName}",
             Identities = new List<ObjectIdentity>
             {
-                new ObjectIdentity
+                new()
                 {
                     SignInType = "emailAddress",
-                    Issuer = "ionichealthb2c.onmicrosoft.com",
+                    Issuer = "domain.onmicrosoft.com",
                     IssuerAssignedId = userSyncAdb2CModel.Email
                 }
             },
